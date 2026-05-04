@@ -179,7 +179,7 @@ export function PayrollPage() {
       const next = { ...prev, [assistantId]: value };
       try {
         localStorage.setItem(`payroll_no_work:${currentMonth}`, JSON.stringify(next));
-      } catch {}
+      } catch (_) { /* localStorage unavailable – safe to ignore */ }
       return next;
     });
   };
