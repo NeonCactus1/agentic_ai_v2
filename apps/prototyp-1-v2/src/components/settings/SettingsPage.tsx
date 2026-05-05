@@ -8,7 +8,7 @@ import {
 import { toast } from 'sonner';
 import {
   Settings as SettingsIcon, User, Save, MapPin, CreditCard,
-  Shield, RotateCcw, HeartHandshake, Mail, Home
+  RotateCcw, HeartHandshake, Mail, Home
 } from 'lucide-react';
 import { getCantonFromPLZ } from '@/utils/chPlz';
 import { cn } from '@/lib/utils';
@@ -731,22 +731,6 @@ export function SettingsPage() {
           )}
         </div>
 
-        {/* Right Column: Konto */}
-        <div className="lg:col-span-5 space-y-6">
-          <SettingsCard
-            icon={Shield}
-            iconColor="text-blue-600"
-            iconBg="bg-blue-500/10"
-            title="Konto"
-            description="Ihre Anmeldedaten und Zugriffsrechte"
-          >
-            <ReadOnlyField label="E-Mail" value={user?.email ?? ''} />
-            <ReadOnlyField
-              label="Rolle"
-              value={employerAccess?.role === 'admin_full' ? 'Kontoinhaber' : 'Mitarbeiter'}
-            />
-          </SettingsCard>
-        </div>
       </div>
       )}
 
