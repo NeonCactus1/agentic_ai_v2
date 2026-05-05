@@ -195,7 +195,8 @@ export function AssistantsPage() {
 
       {/* Assistant list */}
       <div className="bg-card rounded-xl border overflow-hidden">
-        <table className="w-full">
+        <div className="overflow-x-auto">
+        <table className="w-full min-w-[560px]">
           <thead>
             <tr className="border-b bg-muted/30">
               <th className="text-left text-xs font-semibold text-muted-foreground uppercase tracking-wider px-6 py-3">Name / Kontakt</th>
@@ -295,6 +296,7 @@ export function AssistantsPage() {
             )}
           </tbody>
         </table>
+        </div>
       </div>
 
       {/* (Old Add/Edit modal removed in favor of full AssistantOnboarding screen) */}
